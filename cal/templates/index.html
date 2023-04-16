@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Deep Learning Calculator</title>
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/css/style_1.css">
+    <link rel="stylesheet" href="../static/css/style_0.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container_h">
+            <div class="container_h_1"><h1 class="title_style_1">Deep Learning Survival</h1></div>
+            <div class="container_h_2"><h2 class="title_style_2">HBV-Related HCC Survival Prediction</h2></div>
+            <div class="container_h_3"><p class="masthead-button-links">
+                <a class="btn btn-lg btn-primary btn-shadow" href="/">Reload Model</a>
+            </p></div>
+        </div>
+    </div>
+
+    <div class="main">
+        <form method="POST" target="_blank">
+            <div>
+                    <h2 class="input-title">Please Input Your Parameters</h2>
+            </div>
+
+            <div class="left">
+
+    <!--            left-1-->
+            <div class="base-line border-set">
+                <div class="split-title">
+                    <h2 class="split-title-h2">Base-line Factors</h2>
+                </div>
+
+                <div class="field">
+                    <label class="label-pad" for="age">Age (years)</label>
+                    <br>
+                    <div>
+                        <input type="number" name="age" class="form-control" value="55" placeholder="55" min="18" max="100" step="1.0">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label-pad" for="gender">Gender</label>
+                    <br>
+                    <div>
+                        <select  class="form-select" name="gender" id="gender">
+                            <option value="0">Female</option>
+                            <option value="1" selected="selected">Male</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label-pad" for="BMI">BMI (kg/m<sup>2</sup>)</label>
+                    <br>
+                    <div>
+                        <input type="number" name="BMI" class="form-control" value="24" placeholder="24" min="10" max="45" step="0.1">
+                    </div>
+                </div>
+            </div>
+
+    <!--            left-2-->
+
+                <div class="tumor-related border-set">
+                    <div class="split-title">
+                        <h2 class="split-title-h2">Liver and Tumor Factors</h2>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="cirrhosis">Liver Cirrhosis</label>
+                        <br>
+                        <div>
+                            <select  class="form-select" name="cirrhosis" id="cirrhosis">
+                                <option value="0" selected="selected">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="child-pugh">Child-Pugh Grade</label>
+                        <br>
+                        <div>
+                            <select  class="form-select" name="child-pugh" id="child-pugh">
+                                <option value="0" selected="selected">A</option>
+                                <option value="1">B</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="afp">AFP Concentration (ng/ml)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="afp" class="form-control" value="200" placeholder="200" min="0" max="1600000" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="tumor-size">Tumor Size (Max, cm)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="tumor-size" class="form-control" value="5" placeholder="5" min="0.5" max="45" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="tumor-number">Tumor Node</label>
+                        <br>
+                        <div>
+                            <select  class="form-select" name="tumor-number" id="tumor-number">
+                                <option value="0" selected="selected">Single</option>
+                                <option value="1">Multiple</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="macroinvasion">Macro Vascular invasion</label>
+                        <br>
+                        <div>
+                            <select  class="form-select" name="macroinvasion" id="macroinvasion">
+                                <option value="0" selected="selected">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="pathological_grade">Pathological Grade</label>
+                        <br>
+                        <div>
+                            <select  class="form-select" name="pathological_grade" id="pathological_grade">
+                                <option value="0">Welly</option>
+                                <option value="1" selected="selected">Moderately</option>
+                                <option value="2">Poorly</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="mvi">MVI</label>
+                        <br>
+                        <div>
+                            <select  class="form-select" name="mvi" id="mvi">
+                                <option value="0" selected="selected">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+
+    <!--            left-3-->
+                <div class="treatment border-set">
+                    <div class="split-title">
+                        <h2 class="split-title-h2">Treatments After Hepatectomy</h2>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="enhanced-tace">Enhanced Tace</label>
+                        <br>
+                        <div>
+                            <select  class="form-select" name="enhanced-tace" id="enhanced-tace">
+                                <option value="0" selected="selected">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="tace">TACE (Recurrence Treatment)</label>
+                        <br>
+                        <div>
+                            <select  class="form-select" name="tace" id="tace">
+                                <option value="0">No</option>
+                                <option value="1" selected="selected">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="re-resection">Re-hepatechtomy (Recurrence Treatment)</label>
+                        <br>
+                        <div>
+                            <select  class="form-select" name="re-resection" id="re-resection">
+                                <option value="0" selected="selected">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="RFA">RFA (Recurrence Treatment)</label>
+                        <br>
+                        <div>
+                            <select  class="form-select" name="RFA" id="RFA">
+                                <option value="0" selected="selected">No</option>
+                                <option value="1">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+
+    <!--            right-1-->
+            <div class="corhobity border-set">
+                <div class="split-title">
+                    <h2 class="split-title-h2">Comorbidity Factors</h2>
+                </div>
+
+                <div class="field">
+                    <label class="label-pad" for="smoking">Cigerate Smoking</label>
+                    <br>
+                    <div>
+                        <select  class="form-select" name="smoking" id="smoking">
+                            <option value="0" selected="selected">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label-pad" for="alcohol">Alcohol Drinking</label>
+                    <br>
+                    <div>
+                        <select  class="form-select" name="alcohol" id="alcohol">
+                            <option value="0" selected="selected">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label-pad" for="hypertension">Hypertesion</label>
+                    <br>
+                    <div>
+                        <select  class="form-select" name="hypertension" id="hypertension">
+                            <option value="0" selected="selected">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label-pad" for="t2dm">T2DM</label>
+                    <br>
+                    <div>
+                        <select  class="form-select" name="t2dm" id="t2dm">
+                            <option value="0" selected="selected">No</option>
+                            <option value="1">Yes</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+
+    <!--                right-2-->
+                <div class="blood-routine border-set">
+                    <div class="split-title">
+                        <h2 class="split-title-h2">Blood Examinations</h2>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="alb">Alb (g/L)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="alb" class="form-control" value="38" placeholder="38" min="10" max="60" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="alt">Alt (U/L)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="alt" class="form-control" value="30" placeholder="30" min="5" max="2000" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="ast">Ast (U/L)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="ast" class="form-control" value="30" placeholder="30" min="5" max="2000" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="ggt">GGT (U/L)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="ggt" class="form-control" value="50" placeholder="50" min="5" max="20000" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="tb">TB (mmol/L)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="tb" class="form-control" value="20" placeholder="20" min="1" max="5000" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="hbv-dna">HBV-DNA Copy</label>
+                        <br>
+                        <div>
+                            <input type="number" name="hbv-dna" class="form-control" value="1000" placeholder="1000" min="100" max="900000" step="10">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="neu">Neutrophil (10<sup>9</sup>/L)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="neu" class="form-control" value="2.5" placeholder="2.5" min="0" max="50" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="plt">Platelet (10<sup>9</sup>/L)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="plt" class="form-control" value="250" placeholder="250" min="5" max="3000" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="lym">Lymphocyte (10<sup>9</sup>/L)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="lym" class="form-control" value="2" placeholder="2" min="0" max="1000" step="0.1">
+                        </div>
+                    </div>
+
+                </div>
+
+    <!--            right-3-->
+                <div class="operation-related border-set">
+                    <div class="split-title">
+                        <h2 class="split-title-h2">Hepatectomy Factors</h2>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="operation-time">Operation Time (min)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="operation-time" class="form-control" value="240" placeholder="240" min="15" max="1500" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label class="label-pad" for="blood-loss">Blood Loss (ml)</label>
+                        <br>
+                        <div>
+                            <input type="number" name="blood-loss" class="form-control" value="500" placeholder="500" min="5" max="50000" step="0.1">
+                        </div>
+                    </div>
+
+            </div>
+
+        </div>
+
+            <div class="calculate">
+<!--            <button type="submit" formaction="{{ url_for('Survival_analyze') }}" class="btn btn-primary btn-mar" value="RFS" name="ana_sele"><b>Predict RFS</b></button>-->
+            <button type="submit" formaction="{{ url_for('Survival_analyze') }}" class="btn btn-primary btn-mar" value="CSS" name="ana_sele"><b>Predict CSS</b></button>
+            <button type="reset" class="btn btn-success btn-mar"><b>Clere All</b></button>
+        </div>
+
+        </form>
+    </div>
+
+    <div class="footer-design">
+        <div class="col-sm-12 footer-info">
+            <p class="p-mar">©2022-2023 || <b>Designed by <font color="maroon">Tianyi Liang & Prof. Chuangye Han</font></b> </p>
+            <p class="p-mar_2"> <b>Directed by <font color="maroon">Prof. Tao Peng</font> </b> || <b>Email: <font color="maroon">pengtaogmu@163.com</font></b></p>
+            <p><a href="https://github.com/Tianyi-Liang">Github Project</a></p>
+        </div>
+    </div>
+
+</body>
+    <script type="text/javascript" src="../static/js/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+</html>

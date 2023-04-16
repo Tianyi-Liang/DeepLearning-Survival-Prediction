@@ -1,0 +1,251 @@
+
+/*初始化样式*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/***********************************************************/
+.header {
+    width: inherit;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container_h {
+    margin: auto;
+    width: 1300px;
+    height: 450px;
+    margin: auto;
+}
+
+.container_h_1 {
+    width: auto;
+    height: 200px;
+    padding-top: 100px;
+}
+
+.title_style_1 {
+    font-size: 75px;
+    font-family: Arial;
+    font-weight: bold;
+    color: #4a7ef1;
+    text-align: center;
+}
+
+.container_h_2 {
+    width: auto;
+    height: 100px;
+    padding-top: 25px;
+}
+
+.title_style_2 {
+    color: #4a7ef1;
+    font-family: "Yu Gothic UI Semibold";
+    text-align: center;
+}
+
+.container_h_3 {
+    padding-top: 5px;
+    text-align: center;
+}
+
+/***********************************************************/
+
+
+.main {
+    width: 1300px;
+    height: 1830px;
+    margin: 0 auto;
+    /*background-color: #3dd5f3;*/
+    position: relative;
+    margin-top: 10px;
+}
+
+
+.input-title {
+    margin-bottom: 10px;
+    font-family: "Microsoft YaHei UI";
+    background-color: rgba(119, 206, 200, 0.75);
+    line-height: 50px;
+    height: 50px;
+    padding-left: 14px;
+    font-weight: bold;
+    border: rgba(0, 0 , 0, 0.4) solid 1px;
+    border-radius: 5px;
+}
+
+/***********************************************************/
+.left {
+    width: 650px;
+    height: 1700px;
+    float: left;
+}
+
+.right {
+    width: 650px;
+    height: 1700px;
+    float: right;
+}
+
+.calculate {
+    width: 1300px;
+    height: 70px;
+    background-color: rgba(126, 203, 191, 0.8);
+    float: left;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border: rgba(0, 0 , 0, 0.4) solid 1px;
+    border-radius: 5px;
+}
+/***********************************************************/
+
+
+
+
+
+/***********************************************************/
+.base-line{
+    width: 640px;
+    height: 360px;
+    float: left;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+.field {
+    margin-top: 25px;
+    height: 68px;
+}
+
+.label-pad{
+    padding-left: 13px;
+    font-family: "Microsoft YaHei UI";
+    flood-color: #0a53be;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.split-title{
+    padding-left: 13px;
+    padding-top: 15px;
+    font-family: "Times New Roman";
+
+    background-color: #f3f7ff;
+}
+
+.split-title-h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: "Britannic Bold";
+    font-weight: bold;
+}
+
+/************************************************************/
+
+
+.border-set{
+    border: rgba(179, 113, 222, 0.5) solid 3px;
+}
+
+
+/************************************************************/
+.corhobity{
+    width: 640px;
+    height: 453px;
+    float: left;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+/************************************************************/
+
+
+/************************************************************/
+.blood-routine{
+    width: 640px;
+    height: 918px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+/************************************************************/
+
+
+/************************************************************/
+.treatment{
+    width: 640px;
+    height: 453px;
+    float: left;
+    margin-top: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+/************************************************************/
+
+
+/************************************************************/
+.tumor-related{
+    width: 640px;
+    height: 825px;
+    float: left;
+    margin-right: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+/************************************************************/
+
+/************************************************************/
+.operation-related{
+    width: 640px;
+    height: 267px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+/************************************************************/
+
+
+/************************************************************/
+.btn-mar{
+    height: 50px;
+    width: 120px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+/************************************************************/
+
+/************************************************************/
+.footer-design {
+    width: inherit;
+    height: 200px;
+    background-color: rgba(217, 215, 215, 0.2);
+    margin-top: 25px;
+    border-top: solid 1px;
+}
+
+
+.footer-info {
+    text-align: center;
+    font-size: 18px;
+    font-family: "Times New Roman";
+}
+
+a {
+    text-decoration: none;
+}
+
+.p-mar {
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+
+.p-mar_2 {
+    margin-top: 0px;
+    margin-bottom: 0px!important;
+}
+
+/************************************************************/

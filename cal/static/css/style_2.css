@@ -1,0 +1,67 @@
+.back-ground {
+    background-color: rgba(236,232,224,0.5)
+}
+
+.header_pre {
+    width: inherit;
+    height: 150px;
+    text-align: center;
+    line-height: 150px;
+    background-color: rgba(136, 137, 224, 0.8);
+    color: rgb(0, 0, 0);
+
+}
+
+.header_pre > div > h1{
+    line-height: 150px;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+
+.explain {
+    margin: auto;
+    width: inherit;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #dc3545;
+    font-weight: bold;
+    font-family: "Microsoft YaHei UI";
+    font-size: 18px;
+}
+
+.img_pre {
+    margin: auto;
+    height: 500px;
+    width: 700px;
+}
+
+.footer_pre {
+    margin: auto;
+    height: 100px;
+    width: 900px;
+    margin-top: 20px;
+    border-top: rgba(0, 0, 0, 0.3) solid 2px;
+    text-align: center;
+}
+
+.footer-info {
+    text-align: center;
+    font-size: 18px;
+    font-family: "Times New Roman";
+}
+
+.p-mar {
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+
+.p-mar_2 {
+    margin-top: 0px;
+    margin-bottom: 0px!important;
+}
+
+a {
+    text-decoration: none;
+}
